@@ -111,7 +111,7 @@ body {
 		Vector sessionlist=SessionSetup.getSessionAllNames();
 		userAssignments=SessionSetup.getUserAssignment();
  	if(request.getParameter("report") != null){
- 			
+ 		SessionSetup.setSelectedSession(Integer.parseInt(request.getParameter("selSession")));
  		if(SessionSetup.getSelectedSession()==0){
  			%>
 				<script type="text/javascript">

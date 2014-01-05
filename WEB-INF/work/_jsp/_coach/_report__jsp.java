@@ -161,7 +161,7 @@ public class _report__jsp extends com.caucho.jsp.JavaPage
 		Vector sessionlist=SessionSetup.getSessionAllNames();
 		userAssignments=SessionSetup.getUserAssignment();
  	if(request.getParameter("report") != null){
- 			
+ 		SessionSetup.setSelectedSession(Integer.parseInt(request.getParameter("selSession")));
  		if(SessionSetup.getSelectedSession()==0){
  			
     out.write(_jsp_string4, 0, _jsp_string4.length);
@@ -328,7 +328,7 @@ public class _report__jsp extends com.caucho.jsp.JavaPage
     String resourcePath = loader.getResourcePathSpecificFirst();
     mergePath.addClassPath(resourcePath);
     com.caucho.vfs.Depend depend;
-    depend = new com.caucho.vfs.Depend(appDir.lookup("Coach/Report.jsp"), 4187982320321076887L, false);
+    depend = new com.caucho.vfs.Depend(appDir.lookup("Coach/Report.jsp"), 4642015050599898483L, false);
     _caucho_depends.add(depend);
   }
 
